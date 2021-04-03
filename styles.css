@@ -13,12 +13,6 @@ header {
     padding: 20px;
 }
 
-header h1 {
-    color: #25272E;
-    text-align: center;
-    font-family: Asap, sans-serif;
-}
-
 .score-board {
     margin: 20px auto;
     border: 3px solid white;
@@ -94,4 +88,25 @@ img {
     font-weight: bold;
     font-size: 20px;
     margin-top: 20px;
+}
+
+.green-glow {
+    border: 4px solid #4dcc7d;
+    box-shadow: 0 0 20px #31b43a;
+}
+
+.red-glow {
+    border: 4px solid #fc121b;
+    box-shadow: 0 0 20px #d01115;
+}
+
+.gray-glow {
+    border: 4px solid #545455;
+    box-shadow: 0 0 20px #4f5253;
+}
+
+header h1 {
+    color: #25272E;
+    text-align: center;
+    font-family: Asap, sans-serif;
 }

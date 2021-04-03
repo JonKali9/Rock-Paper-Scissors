@@ -15,16 +15,26 @@ function getComputerChoice() {
 
 function win(user, comp) {
     userScore_span.innerHTML = parseInt(userScore_span.innerHTML) + 1;
-    result_p.innerHTML = `${user} beats ${comp}, you win!`
+    result_p.innerHTML = `${user} beats ${comp}, you win!`;
+    const userChoiceLetter = (user.charAt(0)).toLowerCase();
+    document.querySelector('#'+userChoiceLetter).classList.add('green-glow');
+    setTimeout(function() {document.querySelector('#'+userChoiceLetter).classList.remove('green-glow')}, 500);
 }
+
 
 function lose(user, comp) {
     computerScore_span.innerHTML = parseInt(computerScore_span.innerHTML) + 1;
     result_p.innerHTML = `${comp} beats ${user}, you lose!`
+    const userChoiceLetter = (user.charAt(0)).toLowerCase();
+    document.querySelector('#'+userChoiceLetter).classList.add('red-glow');
+    setTimeout(function() {document.querySelector('#'+userChoiceLetter).classList.remove('red-glow')}, 500);
 }
 
 function tie(user) {
     result_p.innerHTML = `Both choose ${user}, you tie!`
+    const userChoiceLetter = (user.charAt(0)).toLowerCase();
+    document.querySelector('#'+userChoiceLetter).classList.add('gray-glow');
+    setTimeout(function() {document.querySelector('#'+userChoiceLetter).classList.remove('gray-glow')}, 500);
 }
 
 function game(userChoice) {
